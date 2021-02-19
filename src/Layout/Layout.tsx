@@ -11,19 +11,32 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Container = () => {
+/* 
+
+ <Layout> 
+  <... />
+ </Layout>
+
+*/
+
+type Props = {
+  children: React.ReactNode;
+};
+
+export const Layout: React.FC<Props> = ({ children }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <Grid
         container
         className={classes.container}
+        style={{ minHeight: "100vh" }}
         alignItems="center"
         justify="center"
         direction="column"
-      ></Grid>
+      >
+        {children}
+      </Grid>
     </div>
   );
 };
-
-export default Container;
