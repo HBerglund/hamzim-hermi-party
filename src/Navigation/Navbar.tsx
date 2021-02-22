@@ -12,6 +12,8 @@ const useStyles = makeStyles({
   },
 });
 
+//1. add change event to change color on click
+
 export const NavBar = () => {
   const classes = useStyles();
   return (
